@@ -1,0 +1,83 @@
+// =============================================================================
+// Components: Accessible Buttons (BEM) (Layer: components)
+// =============================================================================
+
+@use '../abstracts/colors' as *;
+@use '../abstracts/spacing' as *;
+@use '../abstracts/typography' as *;
+@use '../abstracts/mixins' as *;
+
+@layer components {
+  .c-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    min-height: 44px; // WCAG 2.5.5 minimum target size
+    padding: var(--space-xs) var(--space-lg);
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+
+    &--primary {
+      background-color: var(--color-brand-cyan);
+      color: #060a12;
+
+      &:hover {
+        background-color: #7dd3fc;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    &--secondary {
+      background-color: var(--color-bg-surface-alt);
+      color: var(--color-text-primary);
+      border-color: var(--color-border-strong);
+
+      &:hover {
+        background-color: var(--color-bg-surface-hover);
+        border-color: var(--color-text-secondary);
+      }
+    }
+
+    &--outline {
+      background-color: transparent;
+      color: var(--color-text-primary);
+      border-color: var(--color-brand-cyan);
+
+      &:hover {
+        background-color: rgba(56, 189, 248, 0.1);
+      }
+    }
+
+    &--icon-only {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: var(--radius-full);
+    }
+
+    &--sm {
+      min-height: 36px;
+      padding: var(--space-2xs) var(--space-sm);
+      font-size: var(--font-size-sm);
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+  }
+}

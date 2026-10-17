@@ -1,0 +1,57 @@
+// =============================================================================
+// StoryCast Mixins & Utilities
+// =============================================================================
+
+@use 'colors' as *;
+@use 'spacing' as *;
+
+// Responsive Viewport Breakpoint Mixin
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (min-width: #{$container-sm}) { @content; }
+  } @else if $breakpoint == 'md' {
+    @media (min-width: #{$container-md}) { @content; }
+  } @else if $breakpoint == 'lg' {
+    @media (min-width: #{$container-lg}) { @content; }
+  } @else if $breakpoint == 'xl' {
+    @media (min-width: #{$container-xl}) { @content; }
+  } @else {
+    @media (min-width: #{$breakpoint}) { @content; }
+  }
+}
+
+// Accessible Focus Ring Mixin (WCAG 2.4.7 & 2.4.11 compliant)
+@mixin focus-ring {
+  outline: 3px solid var(--color-focus-ring, #38bdf8);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 1px var(--color-bg-base, #0a0f1d);
+  border-radius: var(--radius-sm, 4px);
+}
+
+// Visually Hidden (Screen Reader Only) Mixin (WCAG compliant)
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Motion reduction preference (WCAG 2.3.3)
+@mixin prefers-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+// Glassmorphism card backdrop
+@mixin glass-panel {
+  background: rgba(18, 27, 45, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}

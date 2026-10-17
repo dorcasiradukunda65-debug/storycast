@@ -1,0 +1,54 @@
+// =============================================================================
+// StoryCast Design Tokens: Typography
+// =============================================================================
+
+// Font Families
+$font-family-sans:   'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-family-serif:  'Merriweather', Georgia, serif;
+$font-family-mono:   'JetBrains Mono', 'SF Mono', Consolas, Monaco, monospace;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-semibold: 600;
+$font-weight-bold:    700;
+$font-weight-black:   800;
+
+// Fluid Type Scale (Desktop & Mobile fluid scaling via clamp)
+$font-size-xs:   clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem); // 12px -> 13px
+$font-size-sm:   clamp(0.875rem, 0.84rem + 0.2vw, 0.9375rem); // 14px -> 15px
+$font-size-base: clamp(1rem, 0.96rem + 0.25vw, 1.125rem);      // 16px -> 18px
+$font-size-md:   clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);    // 18px -> 20px
+$font-size-lg:   clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);      // 20px -> 24px
+$font-size-xl:   clamp(1.5rem, 1.35rem + 0.85vw, 1.875rem);    // 24px -> 30px
+$font-size-2xl:  clamp(1.875rem, 1.6rem + 1.4vw, 2.375rem);    // 30px -> 38px
+$font-size-3xl:  clamp(2.25rem, 1.9rem + 2vw, 3.125rem);       // 36px -> 50px
+$font-size-hero: clamp(2.75rem, 2.2rem + 3vw, 4rem);          // 44px -> 64px
+
+// Line Heights (adhering to WCAG SC 1.4.12: at least 1.5 for body text)
+$line-height-tight:   1.2;
+$line-height-heading: 1.25;
+$line-height-snug:    1.35;
+$line-height-body:    1.65;
+$line-height-loose:   1.8;
+
+:root {
+  --font-family-sans: #{$font-family-sans};
+  --font-family-serif: #{$font-family-serif};
+  --font-family-mono: #{$font-family-mono};
+
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-base: #{$font-size-base};
+  --font-size-md: #{$font-size-md};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-2xl: #{$font-size-2xl};
+  --font-size-3xl: #{$font-size-3xl};
+  --font-size-hero: #{$font-size-hero};
+
+  --line-height-tight: #{$line-height-tight};
+  --line-height-heading: #{$line-height-heading};
+  --line-height-body: #{$line-height-body};
+  --line-height-loose: #{$line-height-loose};
+}

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+  <defs>
+    <style>
+      .bg { fill: #0a0f1d; }
+      .card-bg { fill: #121b2d; stroke: #334155; stroke-width: 1.5; rx: 12; }
+      .root-bg { fill: #1a263e; stroke: #38bdf8; stroke-width: 2; rx: 12; }
+      .title { fill: #f8fafc; font-family: 'Outfit', -apple-system, sans-serif; font-size: 16px; font-weight: 700; }
+      .root-title { fill: #38bdf8; font-family: 'Outfit', -apple-system, sans-serif; font-size: 20px; font-weight: 800; }
+      .desc { fill: #94a3b8; font-family: -apple-system, sans-serif; font-size: 12px; }
+      .badge { fill: #38bdf8; font-family: -apple-system, monospace; font-size: 11px; font-weight: 600; }
+      .line { stroke: #38bdf8; stroke-width: 2; stroke-dasharray: 4,4; }
+      .solid-line { stroke: #2dd4bf; stroke-width: 2; }
+      .component-box { fill: #0a0f1d; stroke: #1e293b; stroke-width: 1; rx: 6; }
+      .comp-text { fill: #cbd5e1; font-family: -apple-system, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="640" class="bg" />
+
+  <!-- Global Header / StoryCast Root Node -->
+  <g transform="translate(340, 30)">
+    <rect width="320" height="70" class="root-bg" />
+    <text x="160" y="32" text-anchor="middle" class="root-title">StoryCast IA Architecture</text>
+    <text x="160" y="52" text-anchor="middle" class="desc">Persistent Header • Nav Landmarks • Skip Links</text>
+  </g>
+
+  <!-- Connector Lines -->
+  <path d="M 500 100 L 500 140 L 170 140 L 170 170" fill="none" class="solid-line" />
+  <path d="M 500 100 L 500 170" fill="none" class="solid-line" />
+  <path d="M 500 100 L 500 140 L 830 140 L 830 170" fill="none" class="solid-line" />
+
+  <!-- PAGE 1: Home Page -->
+  <g transform="translate(40, 170)">
+    <rect width="260" height="390" class="card-bg" />
+    <text x="20" y="32" class="title">1. Home Page</text>
+    <text x="20" y="50" class="badge">/index.html</text>
+
+    <!-- Components -->
+    <rect x="15" y="65" width="230" height="50" class="component-box" />
+    <text x="25" y="86" class="comp-text" font-weight="bold">Hero Section</text>
+    <text x="25" y="102" class="desc">Mission statement &amp; primary CTAs</text>
+
+    <rect x="15" y="125" width="230" height="65" class="component-box" />
+    <text x="25" y="145" class="comp-text" font-weight="bold">Featured Story Banner</text>
+    <text x="25" y="161" class="desc">Container query adaptive layout</text>
+    <text x="25" y="177" class="desc">Links to Echoes of the Deep</text>
+
+    <rect x="15" y="200" width="230" height="65" class="component-box" />
+    <text x="25" y="220" class="comp-text" font-weight="bold">Curated Stories Grid</text>
+    <text x="25" y="236" class="desc">Accessible format filter pills</text>
+    <text x="25" y="252" class="desc">3 Container-queried story cards</text>
+
+    <rect x="15" y="275" width="230" height="50" class="component-box" />
+    <text x="25" y="296" class="comp-text" font-weight="bold">Accessibility Principles</text>
+    <text x="25" y="312" class="desc">Transcripts, Captions, Keyboard-first</text>
+
+    <rect x="15" y="335" width="230" height="40" class="component-box" />
+    <text x="25" y="358" class="desc">Global Footer &amp; WCAG AA Badge</text>
+  </g>
+
+  <!-- PAGE 2: Story Page (Detail) -->
+  <g transform="translate(370, 170)">
+    <rect width="260" height="390" class="card-bg" stroke="#38bdf8" />
+    <text x="20" y="32" class="title">2. Story Detail Page</text>
+    <text x="20" y="50" class="badge">/story/echoes-of-the-deep.html</text>
+
+    <!-- Components -->
+    <rect x="15" y="65" width="230" height="60" class="component-box" />
+    <text x="25" y="85" class="comp-text" font-weight="bold">Video &amp; Custom Player</text>
+    <text x="25" y="101" class="desc">&lt;video&gt; with WebVTT &lt;track&gt; captions</text>
+    <text x="25" y="117" class="desc">&lt;figcaption&gt; visual/sound descriptions</text>
+
+    <rect x="15" y="135" width="230" height="55" class="component-box" />
+    <text x="25" y="155" class="comp-text" font-weight="bold">Lossless Audio Master</text>
+    <text x="25" y="171" class="desc">&lt;audio&gt; with -16 LUFS loudness</text>
+    <text x="25" y="185" class="desc">Downloadable MP3 and WAV files</text>
+
+    <rect x="15" y="200" width="230" height="70" class="component-box" />
+    <text x="25" y="220" class="comp-text" font-weight="bold">Interactive Transcript</text>
+    <text x="25" y="236" class="desc">Live time-sync with media player</text>
+    <text x="25" y="252" class="desc">Clickable seek buttons &amp; live search</text>
+    <text x="25" y="266" class="desc">Download .TXT &amp; .VTT files</text>
+
+    <rect x="15" y="280" width="230" height="45" class="component-box" />
+    <text x="25" y="300" class="comp-text" font-weight="bold">Field Research &amp; &lt;details&gt;</text>
+    <text x="25" y="316" class="desc">Collapsible acoustic calibration data</text>
+
+    <rect x="15" y="335" width="230" height="40" class="component-box" />
+    <text x="25" y="358" class="desc">Related Stories Grid (Container Queries)</text>
+  </g>
+
+  <!-- PAGE 3: About / Access Page -->
+  <g transform="translate(700, 170)">
+    <rect width="260" height="390" class="card-bg" />
+    <text x="20" y="32" class="title">3. About &amp; Access Page</text>
+    <text x="20" y="50" class="badge">/about.html</text>
+
+    <!-- Components -->
+    <rect x="15" y="65" width="230" height="50" class="component-box" />
+    <text x="25" y="86" class="comp-text" font-weight="bold">Mission &amp; Studio Photo</text>
+    <text x="25" y="102" class="desc">Inclusive storytelling philosophy</text>
+
+    <rect x="15" y="125" width="230" height="65" class="component-box" />
+    <text x="25" y="145" class="comp-text" font-weight="bold">Universal Access Pillars</text>
+    <text x="25" y="161" class="desc">Pristine acoustics (-16 LUFS)</text>
+    <text x="25" y="177" class="desc">Verbatim sync &amp; semantic web</text>
+
+    <rect x="15" y="200" width="230" height="65" class="component-box" />
+    <text x="25" y="220" class="comp-text" font-weight="bold">WCAG 2.1 AA Audit Table</text>
+    <text x="25" y="236" class="desc">Perceivable, Operable,</text>
+    <text x="25" y="252" class="desc">Understandable, Robust checklist</text>
+
+    <rect x="15" y="275" width="230" height="50" class="component-box" />
+    <text x="25" y="296" class="comp-text" font-weight="bold">Keyboard Cheatsheet</text>
+    <text x="25" y="312" class="desc">Tab, Enter, Space, Arrow key guide</text>
+
+    <rect x="15" y="335" width="230" height="40" class="component-box" />
+    <text x="25" y="358" class="desc">Accessibility Feedback Form</text>
+  </g>
+
+  <!-- Cross-page interlink arcs -->
+  <path d="M 280 230 C 330 230, 330 190, 370 190" fill="none" class="line" />
+  <path d="M 630 350 C 670 350, 670 230, 700 230" fill="none" class="line" />
+
+  <!-- Diagram Legend -->
+  <g transform="translate(160, 580)">
+    <line x1="0" y1="10" x2="30" y2="10" class="solid-line" />
+    <text x="40" y="14" class="desc">Primary Navigation Hierarchy</text>
+
+    <line x1="280" y1="10" x2="310" y2="10" class="line" />
+    <text x="320" y="14" class="desc">Cross-Page Deep Links &amp; Contextual Flow</text>
+
+    <rect x="620" y="2" width="16" height="16" fill="#38bdf8" rx="4" />
+    <text x="645" y="14" class="desc">WCAG 2.1 AA Accessible Touchpoints</text>
+  </g>
+</svg>

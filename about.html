@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StoryCast Mission & Accessibility Statement — Learn how StoryCast produces universally accessible acoustic journalism adhering to WCAG 2.1 AA standards.">
+  <meta name="author" content="StoryCast Editorial Team">
+  <title>About & Accessibility Commitment — StoryCast</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Sass Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Accessible Skip Link (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header (WCAG Landmark: banner) -->
+  <header class="c-header" role="banner">
+    <div class="l-container c-header__inner">
+      <a href="index.html" class="c-header__brand" aria-label="StoryCast Home">
+        <svg class="c-header__logo-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="16" cy="16" r="13"></circle>
+          <path d="M12 11v10l8-5-8-5z" fill="currentColor"></path>
+          <path d="M22 10a8 8 0 0 1 0 12"></path>
+          <path d="M25 7a12 12 0 0 1 0 18"></path>
+        </svg>
+        <span>StoryCast</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button type="button" class="c-header__nav-toggle" id="nav-toggle-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Primary Navigation (WCAG Landmark: navigation) -->
+      <nav class="c-header__nav" id="primary-navigation" aria-label="Main Navigation">
+        <ul class="c-header__nav-list">
+          <li>
+            <a href="index.html" class="c-header__nav-link">Home</a>
+          </li>
+          <li>
+            <a href="story/echoes-of-the-deep.html" class="c-header__nav-link">Featured Story</a>
+          </li>
+          <li>
+            <a href="about.html" class="c-header__nav-link" aria-current="page">About & Access</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content (WCAG Landmark: main) -->
+  <main id="main-content" tabindex="-1">
+    <!-- Hero / Mission Header -->
+    <section class="l-section" aria-labelledby="about-hero-title">
+      <div class="l-container">
+        <div style="max-width: 860px;">
+          <span class="c-badge c-badge--accessibility u-mb-xs">Research-Driven & Universal</span>
+          <h1 id="about-hero-title">Democratizing Acoustic Storytelling for All Audiences</h1>
+          <p style="font-size: var(--font-size-lg); line-height: 1.6; color: var(--color-text-secondary);">
+            StoryCast was founded on a simple conviction: storytelling should never exclude anyone due to sensory disability, device limitations, or neurodiversity. We blend investigative journalism, pristine field acoustics, and uncompromising accessibility standards.
+          </p>
+        </div>
+
+        <!-- Studio Photography with Semantic Figure & Figcaption -->
+        <figure style="margin-top: var(--space-xl); border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--color-border-strong); background-color: var(--color-bg-surface);">
+          <img src="assets/images/about-studio.jpg" alt="Two diverse audio producers collaborating in a modern studio suite with audio visualizers and accessible microphone boom arms" style="width: 100%; height: auto; object-fit: cover;" loading="eager">
+          <figcaption style="padding: var(--space-sm) var(--space-md); font-size: var(--font-size-xs); color: var(--color-text-muted); background-color: var(--color-bg-surface-alt); font-style: italic;">
+            Inside the StoryCast acoustic mastering suite: Sound engineers and accessibility consultants co-design transcripts and audio balance.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Mission & Core Values Section -->
+    <section class="l-section l-section--alt" aria-labelledby="mission-title">
+      <div class="l-container">
+        <div style="max-width: 800px; margin-bottom: var(--space-2xl);">
+          <h2 id="mission-title">Our Triad of Universal Storytelling</h2>
+          <p>
+            Traditional podcasts and video documentaries frequently leave behind deaf, blind, or motor-impaired audiences. StoryCast eliminates these barriers through three foundational pillars:
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+          <article style="background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl);">
+            <div style="color: var(--color-brand-cyan); margin-bottom: var(--space-sm);">
+              <svg width="32" height="32" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 12h5l2 8 5-16 3 8h5"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-xs);">1. Pristine Acoustic Engineering</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              All audio tracks are mastered to <strong>-16 LUFS</strong> with controlled dynamic range, ensuring crystal-clear speech intelligibility even against rich background ambient soundscapes.
+            </p>
+          </article>
+
+          <article style="background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl);">
+            <div style="color: var(--color-brand-teal); margin-bottom: var(--space-sm);">
+              <svg width="32" height="32" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-xs);">2. Verbatim Synchronized Transcripts</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              Transcripts are not an afterthought. Every story includes time-coded cues, descriptive sound effects, speaker identifications, and clickable seeking for non-linear consumption.
+            </p>
+          </article>
+
+          <article style="background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-xl);">
+            <div style="color: var(--color-brand-amber); margin-bottom: var(--space-sm);">
+              <svg width="32" height="32" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-xs);">3. Semantic & Container-Responsive Web</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              Shipped purely in semantic HTML5 and modern Sass without JavaScript framework overhead. Content elements adapt gracefully to available container dimensions via CSS Container Queries.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Accessibility Statement (WCAG 2.1 AA Audit) -->
+    <section class="l-section" id="accessibility-features" aria-labelledby="statement-heading">
+      <div class="l-container l-container--narrow">
+        <header style="margin-bottom: var(--space-xl);">
+          <span class="c-badge c-badge--accessibility u-mb-xs">Official Conformance Report</span>
+          <h2 id="statement-heading">WCAG 2.1 AA Accessibility Conformance Statement</h2>
+          <p style="font-size: var(--font-size-base); color: var(--color-text-secondary);">
+            StoryCast is engineered in adherence with the World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. Below is our transparent audit summary:
+          </p>
+        </header>
+
+        <!-- WCAG Audit Table -->
+        <div style="overflow-x: auto; margin-bottom: var(--space-xl);">
+          <table style="width: 100%; border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); overflow: hidden; background: var(--color-bg-surface);">
+            <caption class="sr-only">WCAG 2.1 AA Principles and StoryCast Implementation Status</caption>
+            <thead style="background: var(--color-bg-surface-alt); text-align: left; font-size: var(--font-size-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+              <tr>
+                <th scope="col" style="padding: 12px 16px; border-bottom: 1px solid var(--color-border-strong);">Principle</th>
+                <th scope="col" style="padding: 12px 16px; border-bottom: 1px solid var(--color-border-strong);">WCAG Criteria</th>
+                <th scope="col" style="padding: 12px 16px; border-bottom: 1px solid var(--color-border-strong);">StoryCast Implementation</th>
+                <th scope="col" style="padding: 12px 16px; border-bottom: 1px solid var(--color-border-strong);">Status</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              <tr style="border-bottom: 1px solid var(--color-border-subtle);">
+                <th scope="row" style="padding: 12px 16px; color: var(--color-text-primary); font-weight: 600;">1. Perceivable</th>
+                <td style="padding: 12px 16px;">1.1.1 Non-text Content<br>1.2.2 Captions (Prerecorded)<br>1.4.3 Contrast (Minimum)</td>
+                <td style="padding: 12px 16px;">Descriptive alt text on all figures; WebVTT &lt;track&gt; closed captions; color contrast ratios exceed 5.5:1 (AA requirement 4.5:1).</td>
+                <td style="padding: 12px 16px; color: var(--color-status-success); font-weight: 700;">PASS (AA)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-subtle);">
+                <th scope="row" style="padding: 12px 16px; color: var(--color-text-primary); font-weight: 600;">2. Operable</th>
+                <td style="padding: 12px 16px;">2.1.1 Keyboard Navigable<br>2.4.1 Bypass Blocks<br>2.4.7 Focus Visible</td>
+                <td style="padding: 12px 16px;">All interactive media & transcripts keyboard operable; skip-to-content links; high-contrast 3px focus rings on :focus-visible.</td>
+                <td style="padding: 12px 16px; color: var(--color-status-success); font-weight: 700;">PASS (AA)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-subtle);">
+                <th scope="row" style="padding: 12px 16px; color: var(--color-text-primary); font-weight: 600;">3. Understandable</th>
+                <td style="padding: 12px 16px;">3.1.1 Language of Page<br>3.2.3 Consistent Nav<br>3.3.2 Labels or Instructions</td>
+                <td style="padding: 12px 16px;">&lt;html lang="en"&gt; on all pages; uniform navigation bar with aria-current; clear form inputs and search labels.</td>
+                <td style="padding: 12px 16px; color: var(--color-status-success); font-weight: 700;">PASS (AA)</td>
+              </tr>
+              <tr>
+                <th scope="row" style="padding: 12px 16px; color: var(--color-text-primary); font-weight: 600;">4. Robust</th>
+                <td style="padding: 12px 16px;">4.1.2 Name, Role, Value<br>4.1.3 Status Messages</td>
+                <td style="padding: 12px 16px;">Semantic HTML5 tags with ARIA live-regions (aria-live="polite") announcing transcript filter results and player updates.</td>
+                <td style="padding: 12px 16px; color: var(--color-status-success); font-weight: 700;">PASS (AA)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Keyboard Navigation Cheatsheet -->
+        <article style="background: var(--color-bg-surface); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); padding: var(--space-xl); margin-bottom: var(--space-2xl);">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-sm); color: var(--color-brand-cyan);">
+            Keyboard Navigation Reference
+          </h3>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-md);">
+            StoryCast can be navigated completely without a pointing device:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
+            <div style="display: flex; align-items: center; gap: var(--space-xs);">
+              <kbd style="padding: 4px 8px; background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-strong); border-radius: 4px; font-family: var(--font-family-mono); font-size: var(--font-size-xs);">Tab</kbd>
+              <span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Advance focus to next interactive element</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-xs);">
+              <kbd style="padding: 4px 8px; background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-strong); border-radius: 4px; font-family: var(--font-family-mono); font-size: var(--font-size-xs);">Shift + Tab</kbd>
+              <span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Move focus backward</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-xs);">
+              <kbd style="padding: 4px 8px; background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-strong); border-radius: 4px; font-family: var(--font-family-mono); font-size: var(--font-size-xs);">Space / Enter</kbd>
+              <span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Activate buttons, time links & filters</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--space-xs);">
+              <kbd style="padding: 4px 8px; background: var(--color-bg-surface-alt); border: 1px solid var(--color-border-strong); border-radius: 4px; font-family: var(--font-family-mono); font-size: var(--font-size-xs);">&larr; / &rarr;</kbd>
+              <span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Seek audio / video by 5-second steps</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Engagement & Feedback Section -->
+    <section class="l-section l-section--alt" aria-labelledby="engagement-title">
+      <div class="l-container l-container--narrow">
+        <header style="margin-bottom: var(--space-xl);">
+          <span class="c-badge c-badge--audio u-mb-xs">Community Feedback</span>
+          <h2 id="engagement-title">How You Can Engage with StoryCast</h2>
+          <p style="font-size: var(--font-size-base); color: var(--color-text-secondary);">
+            Accessibility is an ongoing conversation. If you encounter any barriers, caption discrepancies, or audio balance issues, please notify our accessibility team.
+          </p>
+        </header>
+
+        <!-- Feedback Form -->
+        <form id="accessibility-feedback-form" style="background: var(--color-bg-surface); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); padding: var(--space-xl);">
+          <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-md); margin-bottom: var(--space-md);">
+            <div>
+              <label for="feedback-name" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 4px;">
+                Your Name <span aria-hidden="true" style="color: var(--color-brand-cyan);">(Optional)</span>
+              </label>
+              <input type="text" id="feedback-name" name="name" style="width: 100%; padding: 10px 14px; background: var(--color-bg-base); border: 1px solid var(--color-border-strong); border-radius: var(--radius-sm); color: var(--color-text-primary);" placeholder="e.g. Maya Chen">
+            </div>
+
+            <div>
+              <label for="feedback-email" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 4px;">
+                Email Address <span style="color: var(--color-brand-coral);">*</span>
+              </label>
+              <input type="email" id="feedback-email" name="email" required style="width: 100%; padding: 10px 14px; background: var(--color-bg-base); border: 1px solid var(--color-border-strong); border-radius: var(--radius-sm); color: var(--color-text-primary);" placeholder="name@example.com">
+            </div>
+
+            <div>
+              <label for="feedback-category" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 4px;">
+                Feedback Category <span style="color: var(--color-brand-coral);">*</span>
+              </label>
+              <select id="feedback-category" name="category" required style="width: 100%; padding: 10px 14px; background: var(--color-bg-base); border: 1px solid var(--color-border-strong); border-radius: var(--radius-sm); color: var(--color-text-primary);">
+                <option value="transcript">Transcript Correction or Timing Issue</option>
+                <option value="caption">Video Caption Formatting / Sync</option>
+                <option value="screen-reader">Screen Reader or ARIA Barrier</option>
+                <option value="contrast">Color Contrast or Visual Clarity</option>
+                <option value="audio-level">Audio Loudness or Balance</option>
+                <option value="other">General Accessibility Recommendation</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="feedback-message" style="display: block; font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 4px;">
+                Detailed Description <span style="color: var(--color-brand-coral);">*</span>
+              </label>
+              <textarea id="feedback-message" name="message" rows="4" required style="width: 100%; padding: 10px 14px; background: var(--color-bg-base); border: 1px solid var(--color-border-strong); border-radius: var(--radius-sm); color: var(--color-text-primary); resize: vertical;" placeholder="Please describe the issue, which story page you were on, and any assistive tech used (e.g., NVDA, VoiceOver, keyboard)."></textarea>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-sm);">
+            <button type="submit" class="c-btn c-btn--primary">
+              <svg class="c-btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              <span>Submit Accessibility Report</span>
+            </button>
+            <span id="feedback-status" role="status" aria-live="polite" style="font-size: var(--font-size-xs); color: var(--color-brand-teal);"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer (WCAG Landmark: contentinfo) -->
+  <footer class="c-footer" role="contentinfo">
+    <div class="l-container">
+      <div class="c-footer__grid">
+        <div class="c-footer__brand-col">
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <svg class="c-header__logo-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="16" cy="16" r="13"></circle>
+              <path d="M12 11v10l8-5-8-5z" fill="currentColor"></path>
+            </svg>
+            <span style="font-weight: 800; font-size: var(--font-size-lg); color: var(--color-text-primary);">StoryCast</span>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); max-width: 380px;">
+            A research-driven, accessible multimedia storytelling platform. Created with semantic HTML5, Sass, CSS Grid, Flexbox, and Container Queries.
+          </p>
+          <div class="c-footer__badge-group">
+            <span class="c-badge c-badge--accessibility">WCAG 2.1 AA</span>
+            <span class="c-badge c-badge--duration">Semantic HTML5</span>
+            <span class="c-badge c-badge--audio">No Frameworks</span>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="c-footer__title">Navigation</h2>
+          <ul class="c-footer__list">
+            <li><a href="index.html" class="c-footer__link">Home</a></li>
+            <li><a href="story/echoes-of-the-deep.html" class="c-footer__link">Featured Story</a></li>
+            <li><a href="about.html" class="c-footer__link">About StoryCast</a></li>
+            <li><a href="about.html#accessibility-features" class="c-footer__link">Accessibility Statement</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="c-footer__title">Research & Standards</h2>
+          <ul class="c-footer__list">
+            <li><a href="docs/RESEARCH_AND_PLANNING.md" class="c-footer__link">Information Architecture (IA)</a></li>
+            <li><a href="docs/StoryCast_Research_Document.pdf" class="c-footer__link">Research Document (PDF)</a></li>
+            <li><a href="README.md" class="c-footer__link">Accessibility Checklist</a></li>
+            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener noreferrer" class="c-footer__link">W3C WCAG Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-footer__bottom">
+        <p class="c-footer__copyright">&copy; 2026 StoryCast. Built for universal access and open acoustic journalism.</p>
+        <p style="font-size: var(--font-size-xs); color: var(--color-text-muted);">
+          Keyboard shortcut: Press <kbd style="background: var(--color-bg-surface-alt); padding: 2px 6px; border-radius: 3px; border: 1px solid var(--color-border-strong); font-family: var(--font-family-mono);">Tab</kbd> to reveal skip navigation links.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

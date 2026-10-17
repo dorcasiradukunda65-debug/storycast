@@ -1,0 +1,107 @@
+// =============================================================================
+// Global Styles & Accessibility Base (Layer: base)
+// =============================================================================
+
+@use '../abstracts/colors' as *;
+@use '../abstracts/typography' as *;
+@use '../abstracts/spacing' as *;
+@use '../abstracts/mixins' as *;
+
+@layer base {
+  body {
+    font-family: var(--font-family-sans, sans-serif);
+    background-color: var(--color-bg-base, #0a0f1d);
+    color: var(--color-text-primary, #f8fafc);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Accessible Skip Links (WCAG 2.4.1 Bypass Blocks)
+  // -----------------------------------------------------------------------------
+  .skip-link {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    z-index: 9999;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-brand-cyan, #38bdf8);
+    color: #060a12;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--radius-sm, 4px);
+    transform: translateY(-200%);
+    transition: transform var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    &:focus,
+    &:focus-visible {
+      transform: translateY(0);
+      outline: 3px solid #ffffff;
+      outline-offset: 2px;
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Universal Accessible Focus Visible (WCAG 2.4.7 Focus Visible)
+  // -----------------------------------------------------------------------------
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    @include focus-ring;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Semantic Heading Hierarchy
+  // -----------------------------------------------------------------------------
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+    line-height: var(--line-height-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    margin-bottom: var(--space-md);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-xs);
+  }
+
+  h4 {
+    font-size: var(--font-size-lg);
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--space-md);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Screen reader only utility class
+  .sr-only {
+    @include visually-hidden;
+  }
+
+  // High contrast selection
+  ::selection {
+    background-color: var(--color-brand-cyan);
+    color: #060a12;
+  }
+}

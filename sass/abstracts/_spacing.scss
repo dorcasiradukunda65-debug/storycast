@@ -1,0 +1,61 @@
+// =============================================================================
+// StoryCast Design Tokens: Spacing & Dimensions
+// =============================================================================
+
+$space-2xs: 0.25rem;  // 4px
+$space-xs:  0.5rem;   // 8px
+$space-sm:  0.75rem;  // 12px
+$space-md:  1rem;     // 16px
+$space-lg:  1.5rem;   // 24px
+$space-xl:  2rem;     // 32px
+$space-2xl: 3rem;     // 48px
+$space-3xl: 4.5rem;   // 72px
+$space-4xl: 6rem;     // 96px
+
+// Layout Max Widths
+$container-sm:   640px;
+$container-md:   768px;
+$container-lg:   1024px;
+$container-xl:   1280px;
+$container-2xl:  1440px;
+
+// Border Radii
+$radius-sm:  4px;
+$radius-md:  8px;
+$radius-lg:  16px;
+$radius-xl:  24px;
+$radius-full: 9999px;
+
+// Shadows (Subtle glassmorphism and depth)
+$shadow-sm:  0 1px 2px 0 rgba(0, 0, 0, 0.4);
+$shadow-md:  0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+$shadow-lg:  0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+$shadow-glow: 0 0 25px rgba(56, 189, 248, 0.25);
+
+// Transitions
+$transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+:root {
+  --space-2xs: #{$space-2xs};
+  --space-xs:  #{$space-xs};
+  --space-sm:  #{$space-sm};
+  --space-md:  #{$space-md};
+  --space-lg:  #{$space-lg};
+  --space-xl:  #{$space-xl};
+  --space-2xl: #{$space-2xl};
+  --space-3xl: #{$space-3xl};
+
+  --container-max-w: #{$container-xl};
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+
+  --transition-normal: #{$transition-normal};
+}

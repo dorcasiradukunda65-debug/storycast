@@ -1,0 +1,51 @@
+// =============================================================================
+// Components: Badges & Tags (BEM) (Layer: components)
+// =============================================================================
+
+@use '../abstracts/colors' as *;
+@use '../abstracts/spacing' as *;
+@use '../abstracts/typography' as *;
+
+@layer components {
+  .c-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full);
+    line-height: 1;
+
+    &--audio {
+      background-color: rgba(45, 212, 191, 0.15);
+      color: #2dd4bf;
+      border: 1px solid rgba(45, 212, 191, 0.4);
+    }
+
+    &--video {
+      background-color: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    &--duration {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: var(--color-text-secondary);
+      border: 1px solid var(--color-border-subtle);
+    }
+
+    &--accessibility {
+      background-color: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+
+    &__icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+// =============================================================================
+// Components: Category Filters & Search Controls (Layer: components)
+// =============================================================================
+
+@use '../abstracts/colors' as *;
+@use '../abstracts/spacing' as *;
+@use '../abstracts/typography' as *;
+@use '../abstracts/mixins' as *;
+
+@layer components {
+  .c-filters {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-md);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+
+    @include respond-to('md') {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    &__legend {
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-right: var(--space-xs);
+    }
+
+    &__pill {
+      min-height: 38px;
+      padding: 6px 14px;
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      background-color: var(--color-bg-surface-alt);
+      border: 1px solid var(--color-border-strong);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+
+      &:hover {
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-surface-hover);
+      }
+
+      &[aria-pressed="true"] {
+        background-color: var(--color-brand-cyan);
+        color: #060a12;
+        border-color: var(--color-brand-cyan);
+        font-weight: 700;
+      }
+
+      &:focus-visible {
+        @include focus-ring;
+      }
+    }
+  }
+}

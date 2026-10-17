@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StoryCast is an accessible, research-driven audio and video storytelling microsite engineered to WCAG 2.1 AA standards with transcripts, captions, and responsive layouts.">
+  <meta name="author" content="StoryCast Editorial Team">
+  <title>StoryCast — Accessible Audio & Video Storytelling</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Sass Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Skip Link for Keyboard & Screen Reader Users (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header (WCAG Landmark: banner) -->
+  <header class="c-header" role="banner">
+    <div class="l-container c-header__inner">
+      <a href="index.html" class="c-header__brand" aria-label="StoryCast Home">
+        <svg class="c-header__logo-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="16" cy="16" r="13"></circle>
+          <path d="M12 11v10l8-5-8-5z" fill="currentColor"></path>
+          <path d="M22 10a8 8 0 0 1 0 12"></path>
+          <path d="M25 7a12 12 0 0 1 0 18"></path>
+        </svg>
+        <span>StoryCast</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button type="button" class="c-header__nav-toggle" id="nav-toggle-btn" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Primary Navigation (WCAG Landmark: navigation) -->
+      <nav class="c-header__nav" id="primary-navigation" aria-label="Main Navigation">
+        <ul class="c-header__nav-list">
+          <li>
+            <a href="index.html" class="c-header__nav-link" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="story/echoes-of-the-deep.html" class="c-header__nav-link">Featured Story</a>
+          </li>
+          <li>
+            <a href="about.html" class="c-header__nav-link">About & Access</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content (WCAG Landmark: main) -->
+  <main id="main-content" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="l-section" aria-labelledby="hero-title">
+      <div class="l-container">
+        <div class="u-mb-xl">
+          <span class="c-badge c-badge--accessibility u-mb-xs">
+            <svg class="c-badge__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            WCAG 2.1 AA Compliant Audio & Video
+          </span>
+          <h1 id="hero-title">Stories That Resonate. Built for Every Listener.</h1>
+          <p style="max-width: 720px; font-size: var(--font-size-md);">
+            StoryCast is an accessible acoustic journalism platform combining rich documentary soundscapes, synchronized transcripts, closed captions, and research-backed web design.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md);">
+            <a href="story/echoes-of-the-deep.html" class="c-btn c-btn--primary">
+              <svg class="c-btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Experience Featured Story</span>
+            </a>
+            <a href="about.html" class="c-btn c-btn--secondary">
+              <span>Our Accessibility Commitments</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Story Banner using Container Query -->
+        <article class="c-story-card-wrapper" aria-labelledby="featured-story-title">
+          <div class="c-story-card c-story-card--featured">
+            <figure class="c-story-card__figure">
+              <img src="assets/images/hero-ocean.jpg" alt="A glowing translucent jellyfish pulsating in the midnight blue depths of Monterey Canyon" class="c-story-card__image" loading="eager">
+              <span class="c-story-card__duration-pill" aria-label="Duration: 18 minutes">18:42</span>
+            </figure>
+            <div class="c-story-card__body">
+              <div class="c-story-card__tag-list">
+                <span class="c-badge c-badge--video">
+                  <svg class="c-badge__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  </svg>
+                  Video & Audio
+                </span>
+                <span class="c-badge c-badge--audio">Captioned</span>
+                <span class="c-badge c-badge--accessibility">Interactive Transcript</span>
+              </div>
+              <h2 id="featured-story-title" class="c-story-card__title">
+                <a href="story/echoes-of-the-deep.html" class="c-story-card__title-link">
+                  Echoes of the Deep: Hydrophone Chronicles
+                </a>
+              </h2>
+              <p class="c-story-card__excerpt">
+                Journey 3,000 meters beneath Monterey Bay with marine bioacoustician Dr. Elena Rostova. Listen to the haunting echolocation trains of sperm whales and the seismic bass hum of tectonic rifts.
+              </p>
+              <div class="c-story-card__details">
+                <p>Includes high-fidelity hydrophone audio, synchronized WebVTT captions, and downloadable plain-text transcripts.</p>
+              </div>
+              <div class="c-story-card__meta">
+                <div class="c-story-card__author-info">
+                  <span style="font-weight: 600; color: var(--color-text-primary);">By Dr. Elena Rostova & Marcus Thorne</span>
+                  <span aria-hidden="true">•</span>
+                  <time datetime="2026-10-15">October 2026</time>
+                </div>
+                <a href="story/echoes-of-the-deep.html" class="c-btn c-btn--outline c-btn--sm" aria-label="Open Echoes of the Deep story page">
+                  <span>Open Story</span>
+                  <svg class="c-btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Curated Stories Section with Filter and Grid of Container Queried Cards -->
+    <section class="l-section l-section--alt" aria-labelledby="stories-heading">
+      <div class="l-container">
+        <div style="display: flex; flex-direction: column; gap: var(--space-xs); margin-bottom: var(--space-lg);">
+          <h2 id="stories-heading">Explore Stories & Audio Landscapes</h2>
+          <p>Filtered by sensory format and storytelling medium. All releases contain verbatim transcripts.</p>
+        </div>
+
+        <!-- Accessible Filter Pill Bar -->
+        <fieldset class="c-filters" aria-label="Filter stories by media type">
+          <legend class="sr-only">Filter stories</legend>
+          <div class="c-filters__group" role="group" aria-label="Format filter buttons">
+            <span class="c-filters__legend" aria-hidden="true">Format:</span>
+            <button type="button" class="c-filters__pill" aria-pressed="true" data-filter="all">All Stories (3)</button>
+            <button type="button" class="c-filters__pill" aria-pressed="false" data-filter="video">Video & Visuals</button>
+            <button type="button" class="c-filters__pill" aria-pressed="false" data-filter="audio">Audio Only</button>
+            <button type="button" class="c-filters__pill" aria-pressed="false" data-filter="field-recording">Field Recordings</button>
+          </div>
+          <div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-text-muted);">
+              Showing <strong id="story-count" style="color: var(--color-brand-cyan);">3</strong> accessible productions
+            </span>
+          </div>
+        </fieldset>
+
+        <!-- Grid of Stories (Container Query Enabled Cards) -->
+        <div class="l-stories-grid" id="stories-collection">
+          <!-- Card 1 -->
+          <article class="c-story-card-wrapper" data-category="video" aria-labelledby="card-1-title">
+            <div class="c-story-card">
+              <figure class="c-story-card__figure">
+                <img src="assets/images/echoes-poster.jpg" alt="Bioluminescent deep sea organisms illuminated in total darkness" class="c-story-card__image" loading="lazy">
+                <span class="c-story-card__duration-pill" aria-label="Duration: 18 minutes">18:42</span>
+              </figure>
+              <div class="c-story-card__body">
+                <div class="c-story-card__tag-list">
+                  <span class="c-badge c-badge--video">Video</span>
+                  <span class="c-badge c-badge--audio">Captioned</span>
+                </div>
+                <h3 id="card-1-title" class="c-story-card__title">
+                  <a href="story/echoes-of-the-deep.html" class="c-story-card__title-link">
+                    Echoes of the Deep: Hydrophone Chronicles
+                  </a>
+                </h3>
+                <p class="c-story-card__excerpt">
+                  Listening to ocean trenches through deep underwater acoustic sensors. Features marine mammalogy recordings and seismic analysis.
+                </p>
+                <div class="c-story-card__details">
+                  <p>Includes synchronized transcript with timestamp seek buttons.</p>
+                </div>
+                <div class="c-story-card__meta">
+                  <div class="c-story-card__author-info">
+                    <span>Dr. Elena Rostova</span>
+                    <span aria-hidden="true">•</span>
+                    <time datetime="2026-10-15">Oct 2026</time>
+                  </div>
+                  <a href="story/echoes-of-the-deep.html" class="c-btn c-btn--outline c-btn--sm" aria-label="Listen to Echoes of the Deep">
+                    Listen Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="c-story-card-wrapper" data-category="audio" aria-labelledby="card-2-title">
+            <div class="c-story-card">
+              <figure class="c-story-card__figure">
+                <img src="assets/images/card-canopy.jpg" alt="Acoustic recorder set up amidst lush mossy ferns and towering ancient redwood trees" class="c-story-card__image" loading="lazy">
+                <span class="c-story-card__duration-pill" aria-label="Duration: 24 minutes">24:15</span>
+              </figure>
+              <div class="c-story-card__body">
+                <div class="c-story-card__tag-list">
+                  <span class="c-badge c-badge--audio">Audio Doc</span>
+                  <span class="c-badge c-badge--accessibility">Full Transcript</span>
+                </div>
+                <h3 id="card-2-title" class="c-story-card__title">
+                  <a href="story/echoes-of-the-deep.html#audio" class="c-story-card__title-link">
+                    Voices of the Canopy: Acoustic Ecology
+                  </a>
+                </h3>
+                <p class="c-story-card__excerpt">
+                  Biophony in the Pacific Northwest old-growth forests. Recording canopy microclimates and bird migrations before daybreak.
+                </p>
+                <div class="c-story-card__details">
+                  <p>Mastered for spatial binaural headphones and screen-reader accessibility.</p>
+                </div>
+                <div class="c-story-card__meta">
+                  <div class="c-story-card__author-info">
+                    <span>Julian Vance</span>
+                    <span aria-hidden="true">•</span>
+                    <time datetime="2026-09-28">Sep 2026</time>
+                  </div>
+                  <a href="story/echoes-of-the-deep.html#audio" class="c-btn c-btn--outline c-btn--sm" aria-label="Listen to Voices of the Canopy">
+                    Listen Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="c-story-card-wrapper" data-category="field-recording" aria-labelledby="card-3-title">
+            <div class="c-story-card">
+              <figure class="c-story-card__figure">
+                <img src="assets/images/card-urban.jpg" alt="Acoustic field microphone capturing rain puddles and neon reflections in a quiet Tokyo alleyway" class="c-story-card__image" loading="lazy">
+                <span class="c-story-card__duration-pill" aria-label="Duration: 14 minutes">14:50</span>
+              </figure>
+              <div class="c-story-card__body">
+                <div class="c-story-card__tag-list">
+                  <span class="c-badge c-badge--audio">Field Recording</span>
+                  <span class="c-badge c-badge--accessibility">Descriptive Notes</span>
+                </div>
+                <h3 id="card-3-title" class="c-story-card__title">
+                  <a href="story/echoes-of-the-deep.html" class="c-story-card__title-link">
+                    The Urban Pulse: Night Acoustic Cartography
+                  </a>
+                </h3>
+                <p class="c-story-card__excerpt">
+                  A midnight journey through wet asphalt, subway ventilation hums, and rain-washed neon streets in Tokyo and London.
+                </p>
+                <div class="c-story-card__details">
+                  <p>Includes frequency map descriptions and tactile sound notes.</p>
+                </div>
+                <div class="c-story-card__meta">
+                  <div class="c-story-card__author-info">
+                    <span>Kenji Sato</span>
+                    <span aria-hidden="true">•</span>
+                    <time datetime="2026-08-14">Aug 2026</time>
+                  </div>
+                  <a href="story/echoes-of-the-deep.html" class="c-btn c-btn--outline c-btn--sm" aria-label="Listen to The Urban Pulse">
+                    Listen Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessibility Principles Feature Section -->
+    <section class="l-section" aria-labelledby="accessibility-features-title">
+      <div class="l-container">
+        <div style="text-align: center; max-width: 760px; margin-inline: auto; margin-bottom: var(--space-2xl);">
+          <span class="c-badge c-badge--accessibility u-mb-xs">Inclusive by Design</span>
+          <h2 id="accessibility-features-title">How StoryCast Prioritizes Universal Access</h2>
+          <p>Every story is engineered to remove barriers for blind, low-vision, deaf, hard-of-hearing, and neurodivergent audiences.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+          <div style="background-color: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-lg);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--color-brand-cyan);">
+              <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-xs);">Synchronized Transcripts</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              Read along with highlighted speaker tags and audio cue descriptions. Click any timestamp to jump the player straight to that moment.
+            </p>
+          </div>
+
+          <div style="background-color: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-lg);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(45, 212, 191, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--color-brand-teal);">
+              <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M7 15h4M15 15h2M7 11h2M13 11h4"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-xs);">Closed Captions & Track Data</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              Standard WebVTT captions embedded with &lt;track&gt; elements describe environmental sounds, musical cues, and dialogue tone.
+            </p>
+          </div>
+
+          <div style="background-color: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); padding: var(--space-lg);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(251, 191, 36, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); color: var(--color-brand-amber);">
+              <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+              </svg>
+            </div>
+            <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-xs);">Keyboard & Screen Reader First</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+              High-visibility 3px focus rings, logical tab order, ARIA live-regions for player updates, and dedicated skip links on every page.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-2xl);">
+          <a href="about.html" class="c-btn c-btn--primary">
+            <span>Read Full Accessibility Statement & IA Report</span>
+            <svg class="c-btn__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer (WCAG Landmark: contentinfo) -->
+  <footer class="c-footer" role="contentinfo">
+    <div class="l-container">
+      <div class="c-footer__grid">
+        <div class="c-footer__brand-col">
+          <div style="display: flex; align-items: center; gap: var(--space-xs);">
+            <svg class="c-header__logo-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="16" cy="16" r="13"></circle>
+              <path d="M12 11v10l8-5-8-5z" fill="currentColor"></path>
+            </svg>
+            <span style="font-weight: 800; font-size: var(--font-size-lg); color: var(--color-text-primary);">StoryCast</span>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); max-width: 380px;">
+            A research-driven, accessible multimedia storytelling platform. Created with semantic HTML5, Sass, CSS Grid, Flexbox, and Container Queries.
+          </p>
+          <div class="c-footer__badge-group">
+            <span class="c-badge c-badge--accessibility">WCAG 2.1 AA</span>
+            <span class="c-badge c-badge--duration">Semantic HTML5</span>
+            <span class="c-badge c-badge--audio">No Frameworks</span>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="c-footer__title">Navigation</h2>
+          <ul class="c-footer__list">
+            <li><a href="index.html" class="c-footer__link">Home</a></li>
+            <li><a href="story/echoes-of-the-deep.html" class="c-footer__link">Featured Story</a></li>
+            <li><a href="about.html" class="c-footer__link">About StoryCast</a></li>
+            <li><a href="about.html#accessibility-features" class="c-footer__link">Accessibility Statement</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="c-footer__title">Research & Standards</h2>
+          <ul class="c-footer__list">
+            <li><a href="docs/RESEARCH_AND_PLANNING.md" class="c-footer__link">Information Architecture (IA)</a></li>
+            <li><a href="docs/StoryCast_Research_Document.pdf" class="c-footer__link">Research Document (PDF)</a></li>
+            <li><a href="README.md" class="c-footer__link">Accessibility Checklist</a></li>
+            <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener noreferrer" class="c-footer__link">W3C WCAG Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-footer__bottom">
+        <p class="c-footer__copyright">&copy; 2026 StoryCast. Built for universal access and open acoustic journalism.</p>
+        <p style="font-size: var(--font-size-xs); color: var(--color-text-muted);">
+          Keyboard shortcut: Press <kbd style="background: var(--color-bg-surface-alt); padding: 2px 6px; border-radius: 3px; border: 1px solid var(--color-border-strong); font-family: var(--font-family-mono);">Tab</kbd> to reveal skip navigation links.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

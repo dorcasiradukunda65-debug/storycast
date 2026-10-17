@@ -1,0 +1,59 @@
+// =============================================================================
+// StoryCast Design Tokens: Colors (WCAG 2.1 AA & AAA Compliant)
+// =============================================================================
+
+// Base Palette (Dark Theme optimized for acoustic listening & media focus)
+$color-bg-base:        #0a0f1d;
+$color-bg-surface:     #121b2d;
+$color-bg-surface-alt: #1a263e;
+$color-bg-surface-hover: #223252;
+$color-bg-elevated:    #243456;
+
+// Text & Content Colors
+$color-text-primary:   #f8fafc; // Contrast > 16:1 against $color-bg-base
+$color-text-secondary: #cbd5e1; // Contrast > 9.8:1 against $color-bg-base
+$color-text-muted:     #94a3b8; // Contrast > 5.5:1 against $color-bg-base (WCAG AA requires 4.5:1)
+$color-text-inverse:   #060a12;
+
+// Brand & Accent Colors
+$color-brand-cyan:     #38bdf8;
+$color-brand-teal:     #2dd4bf;
+$color-brand-amber:    #fbbf24;
+$color-brand-coral:    #fb7185;
+
+// Interactive States & Feedback
+$color-focus-ring:     #38bdf8;
+$color-focus-outline:  #f8fafc;
+$color-border-subtle:  #1e293b;
+$color-border-strong:  #334155;
+$color-border-focus:   #38bdf8;
+
+// Status
+$color-status-success: #34d399;
+$color-status-warning: #fbbf24;
+$color-status-info:    #38bdf8;
+
+// CSS Custom Properties Export for runtime theming
+:root {
+  --color-bg-base: #{$color-bg-base};
+  --color-bg-surface: #{$color-bg-surface};
+  --color-bg-surface-alt: #{$color-bg-surface-alt};
+  --color-bg-surface-hover: #{$color-bg-surface-hover};
+  --color-bg-elevated: #{$color-bg-elevated};
+
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-text-muted: #{$color-text-muted};
+  --color-text-inverse: #{$color-text-inverse};
+
+  --color-brand-cyan: #{$color-brand-cyan};
+  --color-brand-teal: #{$color-brand-teal};
+  --color-brand-amber: #{$color-brand-amber};
+  --color-brand-coral: #{$color-brand-coral};
+
+  --color-focus-ring: #{$color-focus-ring};
+  --color-focus-outline: #{$color-focus-outline};
+  --color-border-subtle: #{$color-border-subtle};
+  --color-border-strong: #{$color-border-strong};
+  --color-border-focus: #{$color-border-focus};
+}

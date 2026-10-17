@@ -1,0 +1,212 @@
+// =============================================================================
+// Components: Story Card with Container Queries (BEM) (Layer: components)
+// =============================================================================
+
+@use '../abstracts/colors' as *;
+@use '../abstracts/spacing' as *;
+@use '../abstracts/typography' as *;
+@use '../abstracts/mixins' as *;
+
+@layer components {
+  // -----------------------------------------------------------------------------
+  // Container Query Definition
+  // Mandatory requirement: Component layouts that adapt via container queries
+  // -----------------------------------------------------------------------------
+  .c-story-card-wrapper {
+    container-type: inline-size;
+    container-name: storycard;
+    width: 100%;
+  }
+
+  // -----------------------------------------------------------------------------
+  // Base Card (Default stacked layout for small container widths < 440px)
+  // -----------------------------------------------------------------------------
+  .c-story-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-border-strong);
+      box-shadow: var(--shadow-lg);
+    }
+
+    &:focus-within {
+      border-color: var(--color-brand-cyan);
+      box-shadow: 0 0 0 2px var(--color-brand-cyan);
+    }
+
+    &__figure {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background-color: #060a12;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+
+      .c-story-card:hover & {
+        transform: scale(1.05);
+      }
+    }
+
+    &__duration-pill {
+      position: absolute;
+      bottom: var(--space-xs);
+      right: var(--space-xs);
+      background-color: rgba(6, 10, 18, 0.85);
+      color: var(--color-text-primary);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-md);
+      flex-grow: 1;
+    }
+
+    &__tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-xs);
+    }
+
+    &__title {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      line-height: var(--line-height-heading);
+      margin-bottom: var(--space-xs);
+    }
+
+    &__title-link {
+      color: var(--color-text-primary);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-brand-cyan);
+        text-decoration: underline;
+      }
+
+      &:focus-visible {
+        @include focus-ring;
+      }
+    }
+
+    &__excerpt {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+      line-height: var(--line-height-body);
+      margin-bottom: var(--space-md);
+      flex-grow: 1;
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-border-subtle);
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+    }
+
+    &__author-info {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    &__details {
+      display: none; // Hidden in narrow container, revealed via container query
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Container Query Adaptations: Size-Aware Styling
+  // -----------------------------------------------------------------------------
+
+  // When the container is >= 460px wide (e.g. 2-column or wide single-column)
+  @container storycard (min-width: 460px) {
+    .c-story-card {
+      flex-direction: row;
+      align-items: stretch;
+
+      &__figure {
+        width: 42%;
+        aspect-ratio: auto;
+        flex-shrink: 0;
+      }
+
+      &__body {
+        width: 58%;
+        padding: var(--space-lg);
+      }
+
+      &__details {
+        display: block;
+        font-size: var(--font-size-xs);
+        color: var(--color-brand-teal);
+        margin-top: var(--space-xs);
+      }
+    }
+  }
+
+  // When the container is >= 740px wide (e.g. Featured Story card banner)
+  @container storycard (min-width: 740px) {
+    .c-story-card {
+      &__figure {
+        width: 48%;
+      }
+
+      &__body {
+        width: 52%;
+        padding: var(--space-xl);
+      }
+
+      &__title {
+        font-size: var(--font-size-2xl);
+      }
+
+      &__excerpt {
+        font-size: var(--font-size-base);
+      }
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+  // Fallback for browsers without container query support
+  // -----------------------------------------------------------------------------
+  @supports not (container-type: inline-size) {
+    @media (min-width: 768px) {
+      .c-story-card--featured {
+        flex-direction: row;
+
+        .c-story-card__figure {
+          width: 45%;
+          aspect-ratio: auto;
+        }
+
+        .c-story-card__body {
+          width: 55%;
+        }
+      }
+    }
+  }
+}

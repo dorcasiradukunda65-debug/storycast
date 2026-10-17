@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryCast — Design & Research Deliverables: Wireframes & High-Fidelity Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .figma-canvas {
+      background-color: #0d121f;
+      border: 1px solid var(--color-border-strong);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin-block: var(--space-xl);
+    }
+    .figma-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      background-color: var(--color-bg-surface-alt);
+      border: 1px solid var(--color-border-strong);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-lg);
+    }
+    .mockup-frame {
+      background-color: #060a12;
+      border: 2px solid #243456;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      margin-bottom: var(--space-2xl);
+    }
+    .mockup-browser-header {
+      background-color: #121b2d;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #243456;
+    }
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .browser-url {
+      background-color: #060a12;
+      border: 1px solid #1e293b;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: var(--font-family-mono);
+      color: #94a3b8;
+      flex-grow: 1;
+      max-width: 480px;
+    }
+    .wireframe-box {
+      border: 1px dashed #475569;
+      background-color: rgba(30, 41, 59, 0.4);
+      padding: 16px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      color: #94a3b8;
+      font-size: 12px;
+      font-family: var(--font-family-mono);
+    }
+    .annotation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(56, 189, 248, 0.15);
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body style="background-color: #070b16;">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="c-header" role="banner">
+    <div class="l-container c-header__inner">
+      <a href="../index.html" class="c-header__brand">
+        <svg class="c-header__logo-icon" aria-hidden="true" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="16" cy="16" r="13"></circle>
+          <path d="M12 11v10l8-5-8-5z" fill="currentColor"></path>
+        </svg>
+        <span>StoryCast Design Lab</span>
+      </a>
+      <nav class="c-header__nav" aria-label="Mockup Navigation">
+        <ul class="c-header__nav-list">
+          <li><a href="../index.html" class="c-header__nav-link">Live Microsite</a></li>
+          <li><a href="RESEARCH_AND_PLANNING.md" class="c-header__nav-link">Research Doc (MD)</a></li>
+          <li><a href="StoryCast_Research_Document.pdf" class="c-header__nav-link">Research Doc (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="l-container" tabindex="-1" style="padding-block: var(--space-2xl);">
+    <div style="margin-bottom: var(--space-xl);">
+      <span class="c-badge c-badge--accessibility u-mb-xs">Design & Research Deliverable</span>
+      <h1 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-sm);">
+        Information Architecture, Wireframes & High-Fidelity Mockups
+      </h1>
+      <p style="font-size: var(--font-size-md); color: var(--color-text-secondary); max-width: 840px;">
+        This document and visual viewer presents the complete user-centered research, information architecture sitemap, low-fidelity wireframes, and digital high-fidelity mockups for StoryCast.
+      </p>
+    </div>
+
+    <!-- Section 1: Information Architecture Sitemap -->
+    <section aria-labelledby="sitemap-heading" class="figma-canvas">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); flex-wrap: wrap; gap: var(--space-sm);">
+        <div>
+          <span class="annotation-badge">Deliverable 1</span>
+          <h2 id="sitemap-heading" style="font-size: var(--font-size-2xl);">Information Architecture: Sitemap Diagram</h2>
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+            Visual tree demonstrating the semantic relationships, landmarks, and navigation flows between all 3 pages.
+          </p>
+        </div>
+        <a href="sitemap.svg" target="_blank" class="c-btn c-btn--outline c-btn--sm">Open Standalone SVG</a>
+      </div>
+
+      <div style="background: #060a12; border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); overflow: hidden; display: flex; justify-content: center; padding: var(--space-md);">
+        <img src="sitemap.svg" alt="StoryCast Information Architecture Sitemap Diagram displaying Home Page, Story Detail Page, and About Page connected via persistent navigation and deep links" style="max-width: 100%; height: auto;">
+      </div>
+    </section>
+
+    <!-- Section 2: Low-Fidelity Wireframes -->
+    <section aria-labelledby="wireframes-heading" class="figma-canvas">
+      <div style="margin-bottom: var(--space-lg);">
+        <span class="annotation-badge">Deliverable 2</span>
+        <h2 id="wireframes-heading" style="font-size: var(--font-size-2xl);">Low-Fidelity Structural Wireframes</h2>
+        <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+          Structural blueprints focusing on semantic HTML5 landmarks, reading order, accessibility affordances, and container-queried layout zones.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: var(--space-xl);">
+        <!-- Wireframe Page 1 -->
+        <article class="mockup-frame">
+          <div class="mockup-browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot" style="background: #ef4444;"></span>
+              <span class="browser-dot" style="background: #f59e0b;"></span>
+              <span class="browser-dot" style="background: #10b981;"></span>
+            </div>
+            <span class="browser-url">storycast.org/ (Wireframe)</span>
+          </div>
+          <div style="padding: 16px;">
+            <div class="wireframe-box">[HEADER: &lt;header&gt; + Logo + &lt;nav&gt; + Skip-Link]</div>
+            <div class="wireframe-box">[HERO SECTION: &lt;section&gt; + &lt;h1&gt; + CTA Buttons]</div>
+            <div class="wireframe-box" style="border: 1px solid #38bdf8; background: rgba(56, 189, 248, 0.08);">
+              [CONTAINER QUERY ZONE: Featured Story Banner]<br>
+              &bull; Small width: Stacks vertically<br>
+              &bull; &ge;460px: Two-column split layout<br>
+              &bull; &ge;740px: Expansive editorial banner
+            </div>
+            <div class="wireframe-box">[FILTER CONTROLS: &lt;fieldset&gt; with aria-pressed pills]</div>
+            <div class="wireframe-box">[STORIES GRID: CSS Grid 1fr / 2fr / 3fr container]</div>
+            <div class="wireframe-box">[ACCESSIBILITY PILLARS: 3-column feature highlights]</div>
+            <div class="wireframe-box">[FOOTER: &lt;footer&gt; + Sitemap + Standards Links]</div>
+          </div>
+        </article>
+
+        <!-- Wireframe Page 2 -->
+        <article class="mockup-frame">
+          <div class="mockup-browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot" style="background: #ef4444;"></span>
+              <span class="browser-dot" style="background: #f59e0b;"></span>
+              <span class="browser-dot" style="background: #10b981;"></span>
+            </div>
+            <span class="browser-url">storycast.org/story/detail (Wireframe)</span>
+          </div>
+          <div style="padding: 16px;">
+            <div class="wireframe-box">[HEADER + BREADCRUMB NAVIGATION]</div>
+            <div class="wireframe-box">[ARTICLE HEADER: &lt;h1&gt; + Meta + Author Info]</div>
+            <div class="wireframe-box" style="border: 1px solid #38bdf8; background: rgba(56, 189, 248, 0.08);">
+              [ACCESSIBLE VIDEO: &lt;video&gt; + &lt;track captions&gt;]<br>
+              [CUSTOM CONTROLS: Play, -10s, +10s, Speed, CC]<br>
+              [FIGCAPTION: Audio &amp; Visual Descriptions]
+            </div>
+            <div class="wireframe-box">[LOSSLESS AUDIO: &lt;audio&gt; with -16 LUFS Master]</div>
+            <div class="wireframe-box" style="border: 1px solid #2dd4bf; background: rgba(45, 212, 191, 0.08);">
+              [ASIDE: Interactive Synchronized Transcript]<br>
+              &bull; Live search input with aria-live<br>
+              &bull; Time-coded seek triggers ([00:03], etc.)<br>
+              &bull; Downloadable .TXT and .VTT links
+            </div>
+            <div class="wireframe-box">[RELATED STORIES: Container-queried cards]</div>
+            <div class="wireframe-box">[FOOTER: Navigation &amp; WCAG AA Badge]</div>
+          </div>
+        </article>
+
+        <!-- Wireframe Page 3 -->
+        <article class="mockup-frame">
+          <div class="mockup-browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot" style="background: #ef4444;"></span>
+              <span class="browser-dot" style="background: #f59e0b;"></span>
+              <span class="browser-dot" style="background: #10b981;"></span>
+            </div>
+            <span class="browser-url">storycast.org/about (Wireframe)</span>
+          </div>
+          <div style="padding: 16px;">
+            <div class="wireframe-box">[HEADER: &lt;header&gt; with active aria-current="page"]</div>
+            <div class="wireframe-box">[MISSION STATEMENT: &lt;section&gt; + &lt;figure&gt; + &lt;figcaption&gt;]</div>
+            <div class="wireframe-box">[3 PILLARS: Acoustic Engineering, Transcripts, Semantic Web]</div>
+            <div class="wireframe-box" style="border: 1px solid #fbbf24; background: rgba(251, 191, 36, 0.08);">
+              [WCAG 2.1 AA CONFORMANCE AUDIT TABLE]<br>
+              &bull; Perceivable (1.1.1, 1.2.2, 1.4.3)<br>
+              &bull; Operable (2.1.1, 2.4.1, 2.4.7)<br>
+              &bull; Understandable (3.1.1, 3.2.3, 3.3.2)<br>
+              &bull; Robust (4.1.2, 4.1.3)
+            </div>
+            <div class="wireframe-box">[KEYBOARD SHORTCUTS REFERENCE CHEATSHEET]</div>
+            <div class="wireframe-box">[ACCESSIBILITY FEEDBACK FORM &lt;form&gt;]</div>
+            <div class="wireframe-box">[FOOTER: Copyright &amp; Legal Policies]</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 3: High-Fidelity Mockups & Implementation Showcase -->
+    <section aria-labelledby="hifi-heading" class="figma-canvas">
+      <div style="margin-bottom: var(--space-lg);">
+        <span class="annotation-badge">Deliverable 3</span>
+        <h2 id="hifi-heading" style="font-size: var(--font-size-2xl);">High-Fidelity Digital Mockups & Design Tokens</h2>
+        <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+          Fully styled mockups matching the production implementation with active design tokens and WCAG contrast verifications.
+        </p>
+      </div>
+
+      <!-- Quick Links to Live Production Pages -->
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl);">
+        <a href="../index.html" class="c-btn c-btn--primary">Launch Page 1: Home Page</a>
+        <a href="../story/echoes-of-the-deep.html" class="c-btn c-btn--secondary">Launch Page 2: Story Detail</a>
+        <a href="../about.html" class="c-btn c-btn--secondary">Launch Page 3: About & Access</a>
+      </div>
+
+      <!-- Design Tokens Palette -->
+      <article style="background: var(--color-bg-surface); border: 1px solid var(--color-border-strong); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-xl);">
+        <h3 style="font-size: var(--font-size-md); margin-bottom: var(--space-md);">Curated Design Tokens (WCAG 2.1 AA & AAA Contrast)</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-sm);">
+          <div style="background: #0a0f1d; border: 1px solid #334155; padding: 12px; border-radius: 8px;">
+            <div style="width: 24px; height: 24px; background: #0a0f1d; border: 1px solid #fff; border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: bold;">$color-bg-base</div>
+            <div style="font-size: 10px; color: #94a3b8;">#0a0f1d (Dark Navy)</div>
+          </div>
+          <div style="background: #121b2d; border: 1px solid #334155; padding: 12px; border-radius: 8px;">
+            <div style="width: 24px; height: 24px; background: #121b2d; border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: bold;">$color-bg-surface</div>
+            <div style="font-size: 10px; color: #94a3b8;">#121b2d (Surface)</div>
+          </div>
+          <div style="background: #1a263e; border: 1px solid #334155; padding: 12px; border-radius: 8px;">
+            <div style="width: 24px; height: 24px; background: #38bdf8; border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: bold;">$color-brand-cyan</div>
+            <div style="font-size: 10px; color: #38bdf8;">#38bdf8 (Focus Ring)</div>
+          </div>
+          <div style="background: #1a263e; border: 1px solid #334155; padding: 12px; border-radius: 8px;">
+            <div style="width: 24px; height: 24px; background: #2dd4bf; border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: bold;">$color-brand-teal</div>
+            <div style="font-size: 10px; color: #2dd4bf;">#2dd4bf (Audio Pill)</div>
+          </div>
+          <div style="background: #1a263e; border: 1px solid #334155; padding: 12px; border-radius: 8px;">
+            <div style="width: 24px; height: 24px; background: #f8fafc; border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="font-size: 11px; font-weight: bold;">$color-text-primary</div>
+            <div style="font-size: 10px; color: #94a3b8;">#f8fafc (16.2:1 AAA)</div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="c-footer" role="contentinfo">
+    <div class="l-container">
+      <p class="c-footer__copyright">&copy; 2026 StoryCast Research & Design Lab. Deliverables package for StoryCast microsite.</p>
+    </div>
+  </footer>
+</body>
+</html>

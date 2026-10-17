@@ -1,0 +1,38 @@
+// =============================================================================
+// StoryCast: Main Stylesheet
+// Architecture: Sass Partials, Tokens, BEM, and CSS Cascade Layers
+// =============================================================================
+
+@use 'abstracts/colors';
+@use 'abstracts/typography';
+@use 'abstracts/spacing';
+@use 'abstracts/mixins';
+
+@use 'base/reset';
+@use 'base/globals';
+
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
+
+@use 'components/buttons';
+@use 'components/badges';
+@use 'components/filters';
+@use 'components/story-card';
+@use 'components/media-player';
+@use 'components/transcript';
+
+// Explicit cascade layers order declaration
+@layer reset, tokens, base, layout, components, utilities;
+
+@layer utilities {
+  .u-text-center { text-align: center !important; }
+  .u-text-cyan { color: var(--color-brand-cyan) !important; }
+  .u-text-teal { color: var(--color-brand-teal) !important; }
+  .u-mb-xs { margin-bottom: var(--space-xs) !important; }
+  .u-mb-sm { margin-bottom: var(--space-sm) !important; }
+  .u-mb-md { margin-bottom: var(--space-md) !important; }
+  .u-mb-lg { margin-bottom: var(--space-lg) !important; }
+  .u-mb-xl { margin-bottom: var(--space-xl) !important; }
+  .u-gap-sm { gap: var(--space-sm) !important; }
+}
